@@ -1,0 +1,22 @@
+@import "./variables.css";
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+body {
+  list-style: 1.6;
+  font-size: 1.6rem;
+}
+*,
+*::after,
+*::before {
+  outline: none;
+  box-sizing: inherit;
+}
+a {
+  text-decoration: none;
+  transition: all 400ms ease;
+}
+i {
+  user-select: none;
+}
