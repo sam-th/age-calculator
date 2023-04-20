@@ -78,10 +78,10 @@ function yearValidation() {
     makeErrStyle(yearInput, yearInputErrElem, "This field is required");
     result = false;
   } else if (!regexTest(yearInput, yearRegex)) {
-    makeErrStyle(yearInput, yearInputErrElem, "Must be a valid month");
+    makeErrStyle(yearInput, yearInputErrElem, "Must be a valid year");
     result = false;
-  } else if (currentYear <= yearInput.value) {
-    makeErrStyle(yearInput, yearInputErrElem, "Must be a valid month");
+  } else if (currentYear < yearInput.value) {
+    makeErrStyle(yearInput, yearInputErrElem, "Must be a valid year");
     result = false;
   } else {
     yearInput.style.border = "2px solid #efefef";
