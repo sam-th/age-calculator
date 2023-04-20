@@ -93,8 +93,7 @@ function yearValidation() {
 }
 
 // main function
-function ageCalculate() {
-  // elems
+function main() {
   dayValidation();
   monthValidation();
   yearValidation();
@@ -102,5 +101,5 @@ function ageCalculate() {
 
 // events
 submitBtn.addEventListener("click", () => {
-  ageCalculate();
+  main();
 });
