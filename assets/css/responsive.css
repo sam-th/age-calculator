@@ -1,0 +1,16 @@
+@media only screen and (max-width: 1030px) {
+    .container {
+        box-shadow: none;
+        background-color: transparent;
+        width: 100%;
+    }
+    body {
+        background-color: #1111;
+    }
+    .details-box {
+        width: 97%;
+    }
+    .details-box__top {
+        margin-left: 12px;
+    }
+}
