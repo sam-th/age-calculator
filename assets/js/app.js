@@ -92,11 +92,37 @@ function yearValidation() {
   return result;
 }
 
+// calculator function
+async function ageCalculator(params) {
+  // input values
+  let yearInputVal = yearInput.value;
+  let monthInputVal = monthInput.value;
+  let dayInputVal = dayInput.value;
+  let request = await fetch(
+    `https://digidates.de/api/v1/age/${yearInputVal}-${monthInputVal}-${dayInputVal}`
+  );
+  let userAge = await request.json();
+
+  // showing result
+  const yearResultElem = document.querySelector(".year-result-element");
+  const monthResultElem = document.querySelector(".month-result-element");
+  const dayResultElem = document.querySelector(".day-result-element");
+
+  yearResultElem.innerHTML = userAge.ageextended.years;
+  monthResultElem.innerHTML = userAge.ageextended.months;
+  dayResultElem.innerHTML = userAge.ageextended.days;
+}
+
 // main function
 function main() {
-  dayValidation();
-  monthValidation();
-  yearValidation();
+  let dayResult = dayValidation();
+  let monthResult = monthValidation();
+  let yearResult = yearValidation();
+  if (dayResult && monthResult && yearResult) {
+    ageCalculator();
+  } else {
+    return false;
+  }
 }
 
 // events
