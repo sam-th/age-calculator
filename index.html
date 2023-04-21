@@ -1,98 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/images/favicon-32x32.png"
-    />
-    <link rel="stylesheet" href="./assets/css/index.css" />
-    <link rel="stylesheet" href="./assets/css/defult.css" />
-    <link rel="stylesheet" href="./assets/css/responsive.css" />
 
-    <title>Age calculator app</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+  <link rel="stylesheet" href="./assets/css/index.css" />
+  <link rel="stylesheet" href="./assets/css/defult.css" />
+  <link rel="stylesheet" href="./assets/css/responsive.css" />
 
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
-  </head>
-  <body>
-    <section class="section">
-      <div class="container">
-        <div class="details-box">
-          <div class="details-box__top">
-            <div class="details-box__top-text-input">
-              <p class="details-box__top-text">DAY</p>
-              <input
-                type="text"
-                class="details-box__top-input day-input"
-                placeholder="DD"
-              />
-              <div
-                id="day-input-err"
-                style="color: #c12222; font-size: 11.5px; margin-top: 5px; font-weight: bold;"
-              ></div>
-            </div>
-            <div class="details-box__top-text-input">
-              <p class="details-box__top-text">MONTH</p>
-              <input
-                type="text"
-                class="details-box__top-input month-input"
-                placeholder="MM"
-              />
-              <div
-                id="month-input-err"
-                style="color: #c12222; font-size: 11.5px; margin-top: 5px; font-weight: bold;"
-              ></div>
-            </div>
-            <div class="details-box__top-text-input">
-              <p class="details-box__top-text">YEAR</p>
-              <input
-                type="text"
-                class="details-box__top-input year-input"
-                placeholder="YYYY"
-              />
-              <div
-                id="year-input-err"
-                style="color: #c12222; font-size: 11.5px; margin-top: 5px; font-weight: bold;"
-              ></div>
+  <title>Age calculator app</title>
+
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+    .attribution__text-container {
+      margin-top: 2.5rem;
+      font-size: 16px;
+    }
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <section class="section">
+    <div class="container">
+      <div class="details-box">
+        <div class="details-box__top">
+          <div class="details-box__top-text-input">
+            <p class="details-box__top-text">DAY</p>
+            <input type="text" class="details-box__top-input day-input" placeholder="DD" />
+            <div id="day-input-err" style="color: #c12222; font-size: 11.5px; margin-top: 5px; font-weight: bold;">
             </div>
           </div>
-          <div class="details-box__middle">
-            <span class="details-box__middle-icon-container">
-              <img
-                src="assets/images/icon-arrow.svg"
-                class="details-box__middle-icon"
-              />
-            </span>
+          <div class="details-box__top-text-input">
+            <p class="details-box__top-text">MONTH</p>
+            <input type="text" class="details-box__top-input month-input" placeholder="MM" />
+            <div id="month-input-err" style="color: #c12222; font-size: 11.5px; margin-top: 5px; font-weight: bold;">
+            </div>
           </div>
-          <div class="details-box__bottom">
-            <div class="details-box__bottom-text">
-              <span class="details-box__bottom-number year-result-element">--</span> years
-            </div>
-            <div class="details-box__bottom-text">
-              <span class="details-box__bottom-number month-result-element">--</span> months
-            </div>
-            <div class="details-box__bottom-text">
-              <span class="details-box__bottom-number day-result-element">--</span> days
+          <div class="details-box__top-text-input">
+            <p class="details-box__top-text">YEAR</p>
+            <input type="text" class="details-box__top-input year-input" placeholder="YYYY" />
+            <div id="year-input-err" style="color: #c12222; font-size: 11.5px; margin-top: 5px; font-weight: bold;">
             </div>
           </div>
         </div>
+        <div class="details-box__middle">
+          <span class="details-box__middle-icon-container">
+            <img src="assets/images/icon-arrow.svg" class="details-box__middle-icon" />
+          </span>
+        </div>
+        <div class="details-box__bottom">
+          <div class="details-box__bottom-text">
+            <span class="details-box__bottom-number year-result-element">--</span> years
+          </div>
+          <div class="details-box__bottom-text">
+            <span class="details-box__bottom-number month-result-element">--</span> months
+          </div>
+          <div class="details-box__bottom-text">
+            <span class="details-box__bottom-number day-result-element">--</span> days
+          </div>
+        </div>
       </div>
-    </section>
-    <!-- <div class="attribution">
-    Designed by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">sam</a>.
-  </div> -->
-    <script src="assets/js/app.js"></script>
-  </body>
+    </div>
+  </section>
+  <div class="attribution">
+    <div class="attribution__text-container">
+      Designed by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/sam-th">sam</a>.
+    </div>
+  </div>
+  <script src="assets/js/app.js"></script>
+</body>
+
 </html>
